@@ -11,3 +11,9 @@ This repository contains backend practice projects using:
 - REST APIs
 
 Each folder represents a separate mini-project.
+
+## 📂 Repository Structure
+
+- express-crud-api → Basic CRUD REST API
+- auth-jwt → Authentication and authorization
+- notes → Conceptual backend revision notes
