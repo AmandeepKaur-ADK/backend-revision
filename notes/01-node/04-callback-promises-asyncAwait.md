@@ -23,7 +23,7 @@ await: Pauses the execution of the function until the promise is settled.
 
 Error Handling: Instead of .catch(), you use standard try/catch blocks, which makes the code much cleaner.
 
-#QUESTIONS
+##QUESTIONS
 "Does await block the main thread?"
 
 The Answer: No. When the engine hits an await keyword, it suspends the execution of that specific function, saves its context, and moves the function's remainder to the microtask queue. The main Event Loop continues to process other events. Once the awaited promise resolves, the function execution resumes.
