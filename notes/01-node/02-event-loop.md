@@ -67,8 +67,7 @@ Whenever Event Loop phase transition it checks if any promise is resolved.
 
 #RESOURCES
 Documentation & Guides
-Node.js Official Event Loop Guide: The definitive source for internals.
-https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick
+[Node.js Official Event Loop Guide: The definitive source for internals.](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
 
 Node.js Best Practices (GitHub): The "Bible" for production-grade Node.js architecture.
 

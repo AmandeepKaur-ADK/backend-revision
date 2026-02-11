@@ -15,7 +15,7 @@ How it works: You provide a "callback" or a "promise." Node says: "I'm going to 
 
 The Scalability Win: A single thread can handle thousands of connections because it never sits idle. It is always either executing JavaScript or sending off I/O requests.
 
-3. Common "Gotcha" Interview Questions
+3. Common "Gotcha" Interview Questions  
    "Is Node.js always faster than Blocking languages?"
    No. For CPU-intensive tasks (like heavy math, video encoding, or image resizing), Node.js can actually be slower. Since there is only one main thread, a heavy calculation will "block" the event loop, preventing any other non-blocking I/O from being processed.
 
@@ -32,4 +32,5 @@ Complexity, Easier to read (Top to bottom)., Requires handling callbacks/Promise
 
 #RESOURCES
 [Blocking vs Non-Blocking](https://nodejs.org/en/learn/asynchronous-work/overview-of-blocking-vs-non-blocking)
+
 [Asynchronous](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
