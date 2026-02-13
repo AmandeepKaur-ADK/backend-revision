@@ -1,11 +1,13 @@
-#CALLBACKS
+# CALLBACKS
+
 A callback is simply a function passed as an argument to another function, to be executed once an asynchronous operation is complete.
 
 How they work: They follow the "Error-First" pattern in Node.js (e.g., (err, data) => { ... }).
 
 The Problem (Callback Hell): When you have multiple dependent asynchronous tasks, your code starts nesting deeper and deeper to the right. This makes it unreadable and nearly impossible to handle errors properly across levels.
 
-#PROMISES
+# PROMISES
+
 Introduced in ES6, a Promise is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value.
 
 States: Pending, Fulfilled (resolved), or Rejected.
@@ -14,7 +16,8 @@ The Benefit: It allows for Chaining. Instead of nesting, you use .then() and .ca
 
 Interview Tip: Mention that Promises are handled in the Microtask Queue, which has higher priority than the Macrotask Queue (timers/I/O).
 
-#ASYNC/AWAIT
+# ASYNC/AWAIT
+
 Introduced in ES2017, async/await is "syntactic sugar" built on top of Promises. It allows you to write asynchronous code that looks and behaves like synchronous code.
 
 async: Declares that a function returns a promise.
@@ -23,7 +26,8 @@ await: Pauses the execution of the function until the promise is settled.
 
 Error Handling: Instead of .catch(), you use standard try/catch blocks, which makes the code much cleaner.
 
-##QUESTIONS
+## QUESTIONS
+
 "Does await block the main thread?"
 
 The Answer: No. When the engine hits an await keyword, it suspends the execution of that specific function, saves its context, and moves the function's remainder to the microtask queue. The main Event Loop continues to process other events. Once the awaited promise resolves, the function execution resumes.
@@ -43,7 +47,8 @@ The "Try" Finishes: The try block finishes executing because, as far as it's con
 
 The Crash: Seconds later, when the promise actually fails (rejects), the try/catch block is already long gone. The error has nowhere to go, resulting in an UnhandledPromiseRejection.
 
-#RESOURCES
+# RESOURCES
+
 [MDN Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
 
 [Async Await](https://javascript.info/async-await)

@@ -1,14 +1,17 @@
-#CommonJS(CJS) vs ECMAScript Modules(ESM)
+# CommonJS(CJS) vs ECMAScript Modules(ESM)
+
 CommonJS (require): The original Node.js standard. It is synchronous. When you call require(), Node stops everything, reads the file, executes it, and returns the module.exports object.
 
 ES Modules (import): The modern JavaScript standard. It is asynchronous. It allows for Tree Shaking (removing unused code during the build process) which is much harder to do with CJS.
 
-##Questions
+## Questions
+
 "Where do require, module, and \_\_dirname come from? They aren't in the global scope!"
 The Answer: Before Node executes a CommonJS file, it wraps the code in an invisible function called the Module Wrapper:
 This is why these variables feel like globals, but are actually local to each module.
 
-#PROCESS Object
+# PROCESS Object
+
 The process object is a global that provides information about, and control over, the current Node.js process. It is an instance of EventEmitter.
 
 Key Properties to Know:
@@ -22,7 +25,8 @@ process.cwd() vs **dirname: \* **dirname is the directory of the file being exec
 
 process.cwd() is the directory from which you launched the node command.
 
-#Environment Variables (.env)
+# Environment Variables (.env)
+
 Environment variables are used to manage configuration across different environments (Development, Staging, Production) without changing the code.
 
 Advanced Best Practices:
